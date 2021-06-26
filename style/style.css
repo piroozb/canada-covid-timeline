@@ -2,6 +2,10 @@ head {
   margin: 10px;
 }
 
+.btn-primary {
+  transition: background-color 0.3s;
+}
+
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: royalblue;
@@ -37,6 +41,7 @@ body {
     rgb(1, 80, 145),
     rgb(10, 131, 161)
   );
+  font-family: Helvetica, sans-serif;
 }
 
 footer {
@@ -45,12 +50,13 @@ footer {
   left: 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
-  height: 20%;
+  height: 10%;
+  padding: 1.5em;
 }
 
 .logo {
@@ -65,12 +71,28 @@ object {
 
 /* Icon */
 
-#github {
+.icon {
   font-size: 48px;
+  margin: 0.1em;
   color: white;
+  transition: color 0.3s;
 }
 
-#github:hover {
-  color: blue;
+.icon:hover {
+  color: skyblue;
+  text-decoration: none;
+}
+
+.feedback {
+  text-align: right;
+}
+
+.devpost {
+  color: rgb(179, 174, 174);
+  transition: color 0.3s;
+}
+
+.devpost:hover {
+  color: white;
   text-decoration: none;
 }
