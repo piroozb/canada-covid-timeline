@@ -1,16 +1,76 @@
-h1{
-    color: blue;
-    text-align: center;
-    border: 100px;
-    border-color: blue;
+head {
+  margin: 10px;
 }
 
-#grad1 {
-    height: 200px;
-    background-color: blue; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, blue, white);
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: royalblue;
 }
 
-body{
-    margin: 0px;
+header {
+  padding: 1.5em;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  margin: 5px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgb(1, 80, 145),
+    rgb(10, 131, 161)
+  );
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  height: 20%;
+}
+
+.logo {
+  color: black;
+  height: 50px;
+  width: 50px;
+}
+
+object {
+  pointer-events: none;
+}
+
+/* Icon */
+
+#github {
+  font-size: 48px;
+  color: white;
+}
+
+#github:hover {
+  color: blue;
+  text-decoration: none;
 }
