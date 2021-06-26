@@ -1,57 +1,88 @@
+.btn:hover {
+  border-color: black;
+  background-color: #0c0a72;
+}
+
+.buttons {
+  border-color: black;
+  margin: 5px;
+  background-color: transparent;
+  border-width: thin;
+  padding: 0.7rem 1rem;
+  border-radius: 100rem;
+}
+
 head {
   margin: 10px;
 }
 
 .btn-primary {
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: royalblue;
 }
 
 header {
   padding: 1.5em;
   background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-}
-
-.buttons {
-  margin: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 html {
   height: 100%;
 }
 
+@font-face {
+  font-family: body-font;
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+}
+
 body {
   margin: 0px;
   width: 100%;
-  background: linear-gradient(
-    to right bottom,
-    rgb(1, 80, 145),
-    rgb(10, 131, 161)
-  );
-  font-family: Helvetica, sans-serif;
+  background: -webkit-gradient(linear, left top, right bottom, from(#03457c), to(#0a8fb1));
+  background: linear-gradient(to right bottom, #03457c, #0a8fb1);
+  font-family: body-font;
 }
 
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -70,11 +101,11 @@ object {
 }
 
 /* Icon */
-
 .icon {
   font-size: 48px;
   margin: 0.1em;
   color: white;
+  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -87,12 +118,18 @@ object {
   text-align: right;
 }
 
-.devpost {
-  color: rgb(179, 174, 174);
+.info {
+  color: #b3aeae;
+  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-.devpost:hover {
+.info:hover {
   color: white;
   text-decoration: none;
 }
+
+.creators {
+  color: #ddd5d5;
+}
+/*# sourceMappingURL=style.css.map */
