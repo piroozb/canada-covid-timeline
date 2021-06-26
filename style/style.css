@@ -1,0 +1,16 @@
+h1{
+    color: blue;
+    text-align: center;
+    border: 100px;
+    border-color: blue;
+}
+
+#grad1 {
+    height: 200px;
+    background-color: blue; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, blue, white);
+}
+
+body{
+    margin: 0px;
+}
