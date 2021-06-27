@@ -38,7 +38,7 @@ fetch(url)
             data: {
                 labels: time,
                 datasets: [{
-                    label: 'New Cases',
+                    label: 'Cases',
                     backgroundColor: "rgb(255, 99, 132)",
                     borderColor: "darkblue",
                     data: data,
@@ -95,8 +95,6 @@ fetch(url)
 
         function graphClickEvent(event, array) {
             if (array[0]) {
-                console.log(array[0])
-                console.log(time[array[0].index])
                 let date_arr = time[array[0].index].split('-');
                 let bDate = new Date(date_arr[2], date_arr[1] - 1, date_arr[0])
                 bDate.setDate(bDate.getDate() + 1);
@@ -108,8 +106,6 @@ fetch(url)
                 let aDatem = '' + date_arr[1]
                 let aDated = '' + date_arr[0]
                 let after_date = [aDateyr, aDatem, aDated].join("-")
-                console.log(after_date)
-                console.log(before_date)
                 fetch(`https://google-news1.p.rapidapi.com/search?q=Covid&country=CA&lang=en&before=${before_date}&after=${after_date}`, {
                     "method": "GET",
                     "headers": {
@@ -119,9 +115,6 @@ fetch(url)
                 })
                     .then(res => res.json())
                     .then(response => {
-                        console.log(response);
-                        console.log(response.articles[0].title);
-                        console.log(response.articles[0].link);
                         let newsitem1 = response.articles[0].title;
                         let newsitem1link = response.articles[0].link;
                         let newsitem2 = response.articles[1].title;
