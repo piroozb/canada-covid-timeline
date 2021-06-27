@@ -28,6 +28,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: white;
 }
 
 #button-container {
@@ -108,4 +109,17 @@ object {
 
 .creators {
   color: rgb(221, 213, 213);
+}
+
+#covidChart {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 2em;
+}
+
+h1{
+  text-align: center;
 }
