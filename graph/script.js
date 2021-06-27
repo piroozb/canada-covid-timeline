@@ -23,7 +23,6 @@ let url = 'https://api.opencovid.ca/timeseries?stat=cases&loc=canada';
 fetch(url)
     .then(res => res.json())
     .then((out) => {
-        let news = ['balls', 'balls']
         let data = [];
         const time = [];
         covid = out.cases;
@@ -34,7 +33,7 @@ fetch(url)
 
         let ctx = document.getElementById('covidChart').getContext('2d');
 
-        let myChart = new Chart(ctx, {
+        let covidChart = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: time,
@@ -49,6 +48,7 @@ fetch(url)
             options: {
                 maintainAspectRatio: false,
                 responsive: false,
+                onClick: graphClickEvent,
 
                 plugins: {
 
@@ -92,6 +92,56 @@ fetch(url)
 
             }
         })
+
+        function graphClickEvent(event, array) {
+            if (array[0]) {
+                console.log(array[0])
+                console.log(time[array[0].index])
+                let date_arr = time[array[0].index].split('-');
+                let bDate = new Date(date_arr[2], date_arr[1] - 1, date_arr[0])
+                bDate.setDate(bDate.getDate() + 1);
+                let bDateyr = '' + bDate.getFullYear()
+                let bDatem = ('0' + (bDate.getMonth() + 1)).slice(-2)
+                let bDated = ('0' + bDate.getDate()).slice(-2)
+                let before_date = [bDateyr, bDatem, bDated].join('-')
+                let aDateyr = '' + date_arr[2]
+                let aDatem = '' + date_arr[1]
+                let aDated = '' + date_arr[0]
+                let after_date = [aDateyr, aDatem, aDated].join("-")
+                console.log(after_date)
+                console.log(before_date)
+                fetch(`https://google-news1.p.rapidapi.com/search?q=Covid&country=CA&lang=en&before=${before_date}&after=${after_date}`, {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-key": "2785361517msh607261acaae6342p17b5f5jsn44d1b054d305",
+                        "x-rapidapi-host": "google-news1.p.rapidapi.com"
+                    }
+                })
+                    .then(res => res.json())
+                    .then(response => {
+                        console.log(response);
+                        console.log(response.articles[0].title);
+                        console.log(response.articles[0].link);
+                        let newsitem1 = response.articles[0].title;
+                        let newsitem1link = response.articles[0].link;
+                        let newsitem2 = response.articles[1].title;
+                        let newsitem2link = response.articles[1].link;
+                        let newsitem3 = response.articles[2].title;
+                        let newsitem3link = response.articles[2].link;
+                        document.getElementById("news-date").innerHTML = time[array[0].index];
+                        document.getElementById("news-item-1").innerHTML = newsitem1;
+                        document.getElementById("news-item-1-link").setAttribute("href", newsitem1link);
+                        document.getElementById("news-item-2").innerHTML = newsitem2;
+                        document.getElementById("news-item-2-link").setAttribute("href", newsitem2link);
+                        document.getElementById("news-item-3").innerHTML = newsitem3;
+                        document.getElementById("news-item-3-link").setAttribute("href", newsitem3link);
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+            }
+
+        }
     })
     .catch(err => { throw err });
 
