@@ -19,6 +19,7 @@ head {
 .btn-primary {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 header {
@@ -37,7 +38,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #button-container {
@@ -86,7 +87,7 @@ footer {
           align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   height: 10%;
   padding: 1.5em;
 }
@@ -105,13 +106,13 @@ object {
 .icon {
   font-size: 48px;
   margin: 0.1em;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .icon:hover {
-  color: skyblue;
+  color: white;
   text-decoration: none;
 }
 
@@ -120,7 +121,7 @@ object {
 }
 
 .info {
-  color: #b3aeae;
+  color: rgba(255, 255, 255, 0.541);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -131,7 +132,7 @@ object {
 }
 
 .creators {
-  color: #ddd5d5;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #covidChart {
@@ -145,6 +146,11 @@ object {
 
 h1 {
   text-align: center;
+  color: rgba(255, 255, 255, 0.932);
+}
+
+h4 {
+  color: rgba(255, 255, 255, 0.932);
 }
 
 #news-container {
@@ -155,9 +161,9 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid black;
-  background-color: #3354b8;
+  background-color: rgba(3, 69, 124, 0.3);
   padding: 2em;
-  color: blue;
+  border-radius: 25px;
 }
 
 #content-container {
@@ -176,20 +182,21 @@ h1 {
           align-items: center;
 }
 
-h5 {
+.news-links {
   margin: 1em;
   text-align: center;
-  color: #d6cb32;
+  color: rgba(255, 255, 255, 0.8);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-h5:hover {
-  color: #f0b20a;
+.news-links:hover {
+  color: white;
+  text-decoration: none;
 }
 
 h3 {
   text-align: center;
-  color: #9e3309;
+  color: rgba(255, 255, 255, 0.767);
 }
 /*# sourceMappingURL=style.css.map */
