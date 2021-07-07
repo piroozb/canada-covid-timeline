@@ -39,6 +39,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(255, 255, 255, 0.8);
+  margin-bottom: auto;
 }
 
 #button-container {
@@ -51,10 +52,6 @@ header {
           flex-direction: column;
 }
 
-html {
-  height: 100%;
-}
-
 @font-face {
   font-family: body-font;
   src: url(Montserrat/Montserrat-SemiBold.ttf);
@@ -63,15 +60,27 @@ html {
 body {
   margin: 0px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 100vh;
+  overflow-y: scroll;
   background: -webkit-gradient(linear, left top, right bottom, from(#03457c), to(#0a8fb1));
   background: linear-gradient(to right bottom, #03457c, #0a8fb1);
   font-family: body-font;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,8 +97,9 @@ footer {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.8);
-  height: 10%;
+  height: 100px;
   padding: 1.5em;
+  margin-top: auto;
 }
 
 .logo {
@@ -142,6 +152,13 @@ object {
   margin-right: auto;
   display: block;
   padding-top: 2em;
+  width: 100%;
+  height: 100%;
+}
+
+#chart-container {
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -180,6 +197,8 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .news-links {
