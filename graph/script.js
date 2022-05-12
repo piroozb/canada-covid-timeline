@@ -18,7 +18,7 @@ $.ajax(settings).done(function (response) {
 
 // Chart.defaults.global.defaultFontColor = 'red';
 
-let url = 'https://api.opencovid.ca/timeseries?stat=cases&loc=canada';
+let url = 'https://api.opencovid.ca/timeseries?stat=cases';
 
 fetch(url)
     .then(res => res.json())
