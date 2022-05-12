@@ -1,23 +1,3 @@
-/*
-const settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://api.opencovid.ca/timeseries?stat=cases&loc=canada",
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-key": "2785361517msh607261acaae6342p17b5f5jsn44d1b054d305",
-        "x-rapidapi-host": "coronavirus-monitor-v2.p.rapidapi.com"
-    }
-};
-
-
-$.ajax(settings).done(function (response) {
-    console.log(response.text);
-});
-*/
-
-// Chart.defaults.global.defaultFontColor = 'red';
-
 let url = 'https://api.opencovid.ca/timeseries?stat=cases';
 
 fetch(url)
