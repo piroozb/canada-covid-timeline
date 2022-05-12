@@ -7,4 +7,4 @@ Timeline of the COVID-19 Pandemic in Canada
 - [Chart.js](https://www.chartjs.org/)  
 - [Google News API](https://rapidapi.com/ubillarnet/api/google-news1/)  
 - [Open Covid API](https://opencovid.ca/api/)  
-### Link: https://covidtimelinecanada.codes/
+### Link: https://piroozb.github.io/canada-covid-timeline/
