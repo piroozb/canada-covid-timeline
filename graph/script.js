@@ -1,14 +1,14 @@
-let url = 'https://api.opencovid.ca/timeseries?stat=cases';
+let url = 'https://api.opencovid.ca/timeseries?stat=cases&geo=can';
 
 fetch(url)
     .then(res => res.json())
     .then((out) => {
-        let data = [];
+        let charts = [];
         const time = [];
-        covid = out.cases;
+        covid = out.data.cases;
         for (let i = 0; i < covid.length; i++) {
-            data.push(covid[i].cases);
-            time.push(covid[i].date_report);
+            charts.push(covid[i].value_daily);
+            time.push(covid[i].date);
         }
 
         let ctx = document.getElementById('covidChart').getContext('2d');
@@ -21,7 +21,7 @@ fetch(url)
                     label: 'Cases',
                     backgroundColor: "rgb(255, 99, 132)",
                     borderColor: "darkblue",
-                    data: data,
+                    data: charts,
                     borderWidth: 2,
                 }]
             },

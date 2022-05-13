@@ -14,7 +14,12 @@
 
 head {
   margin: 10px;
+  overflow: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+  }
 
 .btn-primary {
   -webkit-transition: background-color 0.3s;
@@ -57,11 +62,14 @@ header {
   src: url(Montserrat/Montserrat-SemiBold.ttf);
 }
 
+
+
 body {
   margin: 0px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  overflow: hidden;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
