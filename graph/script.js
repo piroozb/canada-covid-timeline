@@ -1,4 +1,4 @@
-let url = 'https://api.opencovid.ca/timeseries?stat=cases';
+let url = "https://api.opencovid.ca/timeseries?stat=cases";
 
 fetch(url)
     .then(res => res.json())
